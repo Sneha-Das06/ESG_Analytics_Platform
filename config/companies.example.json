@@ -1,0 +1,6 @@
+{
+  "companies": {
+    "Northstar Renewable Labs": "data/raw/northstar_renewable_labs_synthetic.xlsx",
+    "Harborlight Materials Group": "data/raw/harborlight_materials_group_synthetic.xlsx"
+  }
+}

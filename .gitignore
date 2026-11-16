@@ -1,0 +1,89 @@
+# ==========================================
+# ENVIRONMENT / SECRETS
+# ==========================================
+
+.env
+
+
+# ==========================================
+# PYTHON
+# ==========================================
+
+__pycache__/
+*.py[cod]
+*.pyo
+
+
+# ==========================================
+# VIRTUAL ENVIRONMENT
+# ==========================================
+
+.venv/
+venv/
+env/
+
+
+# ==========================================
+# IDE
+# ==========================================
+
+.vscode/
+.idea/
+
+
+# ==========================================
+# GENERATED OUTPUTS
+# ==========================================
+
+outputs/
+data/*.sqlite3
+data/*.sqlite3-wal
+data/*.sqlite3-shm
+*.db
+data/backups/
+data/company_datasets/
+data/uploads/
+
+
+# ==========================================
+# LOG FILES
+# ==========================================
+
+*.log
+
+
+# Additional publication safety
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# SQLite databases and journal / WAL / shared-memory sidecars anywhere
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Local datasets, uploads, logs, and generated visualizations
+/data/raw/
+/data/processed/
+/data/test_uploads/
+/data/logs/
+/data/visualizations/
+
+# Local source snapshots
+*.bak
+.codex_backups/
+
+/config/companies.json
+
+# Streamlit deployment secrets
+.streamlit/secrets.toml
+# Private Excel datasets and uploads
+*.xlsx
+*.xls
