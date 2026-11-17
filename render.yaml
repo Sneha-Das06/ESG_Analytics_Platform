@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: esg-analytics-demo
+    runtime: python
+    plan: standard
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.address 0.0.0.0 --server.port $PORT
+    disk:
+      name: esg-analytics-demo-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 5
+    envVars:
+      - key: ENABLE_EXTERNAL_CO2
+        value: "false"
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: "true"
+      - key: ESG_MFA_ENCRYPTION_KEY
+        sync: false
